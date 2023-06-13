@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    box-sizing: border-box;
+}
+.contact input {
+    width: 100% !important;
+    padding: 5px 0 !important;
+    font-size: 15px !important;
+    margin: 10px 0;
+    border: none !important;
+    border-bottom: 2px solid black !important;
+    outline: none;
+    border-radius: 0;
+    resize: none;
+}
+.contact textarea {
+    width: 100% !important;
+    padding: 5px 0 !important;
+    font-size: 15px !important;
+    margin: 10px 0;
+    border: none !important;
+    border-bottom: 2px solid black !important;
+    outline: none;
+    resize: none;
+}
+.contact span {
+    position: relative ;
+    left: 0;
+    padding: 5px 0 !important;
+    font-size: 15px !important;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;  
+}
+#message {
+    min-height: 1px !important;
+}
+.nav-link:hover {
+    font-weight: bold;
+}
+.navbar-nav {
+    padding-right: 10% !important;
+}
