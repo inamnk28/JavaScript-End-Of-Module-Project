@@ -52,7 +52,7 @@ let items = [
   <h1 class="fs-6 px-2">${data.name}</h1>
   <p class="price fs-5 px-2">${data.price}</p>
   <p class="fs-6 px-2">${data.desc}</p>
-  <p class="px-2"><button class="but add">ADD TO BAG</button></p>
+  <p class="px-2"><button class="but add py-2">ADD TO BAG</button></p>
   </div>
 </div>`
   });
@@ -105,12 +105,12 @@ let items = [
   let dispProds = document.querySelector(".replay-prod");
   prods.forEach((data) => {
     dispProds.innerHTML += `
-  <div class="card cardB m-3 col-lg-4 col-md-4 col-12">
+  <div class="card cardA m-3 col-lg-4 col-md-4 col-12">
   <img src="${data.Image}" style="width:100%; height: 400px">
   <div card="inner-card why">
   <h1 class="fs-6 px-2">${data.name}</h1>
   <p class="price fs-5 px-2">${data.price}</p>
-  <p class="px-2"><button class="but add">ADD TO BAG</button></p>
+  <p class="px-2"><button class="but add py-2">ADD TO BAG</button></p>
   </div>
 </div>`
   });
@@ -163,12 +163,12 @@ let items = [
   let dispDolce = document.querySelector(".dolce-prod");
   dolceProds.forEach((data) => {
     dispDolce.innerHTML += `
-  <div class="card cardB m-3 col-lg-4 col-md-4 col-12">
+  <div class="card cardA m-3 col-lg-4 col-md-4 col-12">
   <img src="${data.Image}" style="width:100%; height: 400px">
   <div class="inner-card">
   <h1 class="fs-6">${data.name}</h1>
   <p class="price fs-5">${data.price}</p>
-  <p><button class="but add">ADD TO BAG</button></p>
+  <p><button class="but add py-2">ADD TO BAG</button></p>
   </div>
 </div>`
   });
@@ -221,12 +221,12 @@ let items = [
   let dispDiesel = document.querySelector(".diesel-prod");
   dieselProds.forEach((data) => {
     dispDiesel.innerHTML += `
-  <div class="card cardB m-3 col-lg-4 col-md-4 col-12">
+  <div class="card cardA m-3 col-lg-4 col-md-4 col-12">
   <img src="${data.Image}" style="width:100%; height: 400px">
   <div class="inner-card">
   <h1 class="fs-6">${data.name}</h1>
   <p class="price fs-5">${data.price}</p>
-  <p><button class="px-3 add">ADD TO BAG</button></p>
+  <p><button class="px-3 add py-2">ADD TO BAG</button></p>
   </div>
 </div>`
   });
