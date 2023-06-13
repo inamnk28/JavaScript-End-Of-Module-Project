@@ -29,6 +29,17 @@
     height: 300px !important;
     width: 450px !important;
 }
+@media screen and (max-width: 450px) {
+    .card {
+        width: 300px !important;
+        margin-inline: 10px !important;
+    }
+}
+@media screen and (max-width: 550px) {
+    .card {
+        width: 400px !important;
+    }
+}
 .card1 {
     background-image: url(https://i.postimg.cc/nrbHG4cr/3230004bk09-3230004bk09-additional-3-ecommerce-christianlouboutin-louisorlato-3230004-bk09-5-1200x12.jpg);
     background-repeat: no repeat;
@@ -72,7 +83,7 @@
     color: white;
 }
 .card:hover{
-    scale: 1.2;
+    scale: 1.1;
     transition: ease-in-out 0.4s;
     z-index: 1;
 }
