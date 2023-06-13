@@ -13,6 +13,12 @@
     min-height: 700px !important;
     width: 100vw !important;
 }
+.navbar-nav {
+    padding-right: 10% !important;
+}
+.nav-link:hover {
+    font-weight: bold !important;
+}
 .desc {
     position: absolute;
     top: 50%;
