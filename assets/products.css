@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    box-sizing: border-box;
+}
+.navbar-nav {
+    padding-right: 10% !important;
+}
+.nav-link:hover {
+    font-weight: bold !important;
+}
+.card {
+    width: 360px !important;
+    border-radius: 0;
+    padding-inline: 0;
+}
+.card img{
+    
+    transition: 0.5s ease-in-out;
+}
+.card:hover img {
+    scale: 0.9;
+}
+.inner-card {
+    padding-inline: 10px !important;
+}
+.but {
+    padding-inline: 15px;
+}
+.add {
+    color: white;
+    border: none;
+    background-color: black;
+    font-weight: bold;
+}
