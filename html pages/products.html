@@ -19,16 +19,8 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Products
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Replay</a></li>
-                  <li><a class="dropdown-item" href="#">Christian Louboutin</a></li>
-                  <li><a class="dropdown-item" href="#">Diesel</a></li>
-                  <li><a class="dropdown-item" href="#">Dolce & Gabbana</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" onclick="" href="../html pages/products.html">Products</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../JavaScript-End-Of-Module-Project/html pages/about.html">About</a>
@@ -38,12 +30,19 @@
               </li>
             </ul>
             <div class="cart">
-                <a href="http://"><img width="20" src="https://img.icons8.com/ios/50/shopping-cart--v1.png" alt="shopping-cart--v1"/></a>
+                <a href="../html pages/cart.html"><img width="20" src="https://img.icons8.com/ios/50/shopping-cart--v1.png" alt="shopping-cart--v1"/></a>
             </div>
           </div>
         </div>
       </nav>
     </header>
+    <div id="buttons">
+      <button class="value" id="all" onclick="displayAll()">All</button>
+      <button class="value button" id="christian-louboutin" onclick="christianlouboutin()">Christian Louboutin</button>
+      <button class="value button" id="diesel" onclick="diesel()"> Diesel</button>
+      <button class="value button" id="dolce-gabbana" onclick="dolcegabbana()">Dolce & Gabbana</button>
+      <button class="value button" id="replay" onclick="replay()">Replay</button>
+    </div>
     <section class="christian-products overflow-x-hidden">
         <div class="container">
             <div class="christ-head">

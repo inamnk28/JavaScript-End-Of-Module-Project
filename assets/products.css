@@ -20,6 +20,37 @@
 .nav-link:hover {
     font-weight: bold !important;
 }
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+.value {
+    margin-inline: 5px;
+    width: 120px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 0.9;
+    border-color: lightgrey;
+    font-weight: bold;
+    box-shadow: 0.15rem 0.15rem black;
+}
+@media screen and (max-width: 600px) {
+    .value {
+        font-size: smaller !important;
+        width: 90px !important;
+    }
+}
+@media screen and (max-width: 470px) {
+    .value {
+        font-size: smaller !important;
+        min-width: 60px !important;
+        border-radius: 0% !important;
+    }
+}
+.value:hover {
+    background-color: black;
+    color: white;
+}
 .cardA {
     width: 360px !important;
     border-radius: 0;
