@@ -37,13 +37,25 @@
       </nav>
     </header>
     <div id="buttons">
-      <button class="value" id="all" onclick="displayAll()">All</button>
-      <button class="value button" id="christian-louboutin" onclick="christianlouboutin()">Christian Louboutin</button>
-      <button class="value button" id="diesel" onclick="diesel()"> Diesel</button>
-      <button class="value button" id="dolce-gabbana" onclick="dolcegabbana()">Dolce & Gabbana</button>
-      <button class="value button" id="replay" onclick="replay()">Replay</button>
+      <button class="value active" onclick="displayProducts()" id="all">All</button>
+      <button class="value category-button" data-category="Christian-Louboutin" id="christian-louboutin">Christian Louboutin</button>
+      <button class="value category-button" data-category="Diesel" id="diesel"> Diesel</button>
+      <button class= "value category-button" data-category="Dolce-Gabbana" id="dolce-gabbana">Dolce & Gabbana</button>
+      <button class= "value category-button" data-category="Replay" id="replay">Replay</button>
     </div>
-    <section class="christian-products overflow-x-hidden">
+    <div id="prods"></div> 
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section class="christian-products overflow-x-hidden">
         <div class="container">
             <div class="christ-head">
                 <hr>
@@ -82,7 +94,7 @@
             </div>
         </div>
         <div class="diesel-prod row justify-content-center"></div>
-    </section>
+    </section> -->
           <!-- Footer -->
           <footer class="text-center text-lg-start bg-white text-muted mt-5">
             <!-- Section: Social media -->

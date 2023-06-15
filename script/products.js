@@ -1,278 +1,264 @@
 
-let items = [
+ let items = [
     {
       id: 1,
       name: "Christian Louboutin Rantulow",
-      Image: "https://i.postimg.cc/x1Z9ZDRk/1180255bk01-1180255bk01-main-image-ecommerce-christianlouboutin-rantulow-1180255-bk01-1-1200x1200.jpg",
+      image: "https://i.postimg.cc/ZRPBB105/1180255bk01-1180255bk01-main-image-ecommerce-christianlouboutin-rantulow-1180255-bk01-1-1200x1200.jpg",
       desc: "Sneakers - Grained alf leather - Black",
       price: "R 15 000.00",
-      class: "Christian Louboutin",
+      category: "Christian-Louboutin",
     },
     {
       id: 2,
       name: "Christian Louboutin Varsimoc",
-      Image: "https://i.postimg.cc/2jqj45Fs/1230964bwi3-1230964bwi3-main-image-ecommerce-christianlouboutin-varsimoc-1230964-bwi3-1-1200x1200.jpg",
+      image: "https://i.postimg.cc/8kMQWT1H/1230964bwi3-1230964bwi3-main-image-ecommerce-christianlouboutin-varsimoc-1230964-bwi3-1-1200x1200.jpg",
       desc: "Loafers - Calf leather - Havane",
       price: "R 17 500.00",
-      class: "Christian Louboutin",
+      category: "Christian-Louboutin",
     },
     {
       id: 3,
       name: "Christian Louboutin No Penny Spikes",
-      Image: "https://i.postimg.cc/VNxStb0k/1230933bk65-1230933bk65-additional-2-ecommerce-christianlouboutin-nopennyspikes-1230933-bk65-4-1200x.jpg",
+      image: "https://i.postimg.cc/wTLyB96J/1230933bk65-1230933bk65-main-image-ecommerce-christianlouboutin-nopennyspikes-1230933-bk65-1-1200x12.jpg",
       desc: "Loafers - Calf leather - Black",
       price: "R 21 000.00",
-      class: "Christian Louboutin",
+      category: "Christian-Louboutin",
     },
     {
       id: 4,
       name: "Christian Louboutin Louis Junior Spikes",
-      Image: "https://i.postimg.cc/sDLZz8fW/3190797u829-3190797u829-main-image-ecommerce-christianlouboutin-seavaste2orlato-3190797-u829-1-1200x.jpg",
+      image: "https://i.postimg.cc/XqzC49pf/3190797u829-3190797u829-main-image-ecommerce-christianlouboutin-seavaste2orlato-3190797-u829-1-1200x.jpg",
       desc: "Sneakers - Veau velours - Black",
       price: "R 12 300.00",
-      class: "Christian Louboutin",
+      category: "Christian-Louboutin",
     },
     {
       id: 5,
       name: "Christian Louboutin Lou Pik Pik 2 Strass",
-      Image: "https://i.postimg.cc/y6LDXN5B/1230174cm47-1230174cm47-main-image-ecommerce-christianlouboutin-loupikpik2strassorlato-1230174-cm47.jpg",
+      image: "https://i.postimg.cc/KjHZRN7Y/1230174cm47-1230174cm47-main-image-ecommerce-christianlouboutin-loupikpik2strassorlato-1230174-cm47.jpg",
       desc: "High-top sneakers - Suede , jacquard César and strass - Black",
       price: "R 50 000.00",
-      class: "Christian Louboutin",
+      category: "Christian-Louboutin",
     },
     {
         id: 6,
         name: "Christian Louboutin Louis",
-        Image: "https://i.postimg.cc/c4j23QB3/3230004bk09-3230004bk09-main-image-ecommerce-christianlouboutin-louisorlato-3230004-bk09-1-1200x1200.jpg",
+        image: "https://i.postimg.cc/PNsR3vT4/3230004bk09-3230004bk09-main-image-ecommerce-christianlouboutin-louisorlato-3230004-bk09-1-1200x1200.jpg",
         desc: "High-top sneakers - Suede and coated canva Techno CL - Black",
         price: "R 10 000.00",
-        class: "Christian Louboutin",
+        category: "Christian-Louboutin",
       },
-  ];
-function christianlouboutin() {
-  let dispProducts = document.querySelector(".christ-prod");
-  items.forEach((data) => {
-    dispProducts.innerHTML += `
-    <div class="card cardA m-3 col-lg-4 col-md-4 col-12 all  ${data.class}">
-    <img src="${data.Image}" style="width:100%; height: 400px">
-    <div card="inner-card why px-2">
-    <h1 class="fs-6 px-2">${data.name}</h1>
-    <p class="price fs-5 px-2">${data.price}</p>
-    <p class="fs-6 px-2">${data.desc}</p>
-    <p class="px-2"><button class="but add py-2">ADD TO BAG</button></p>
-    </div>
-  </div>
-    `
-  });
-}
-// christianlouboutin()
-
-
-  let prods = [
-    {
-      id: 1,
-      name: "Replay Field Mix Lace Up Sneaker",
-      Image: "https://i.postimg.cc/pXr0Vp86/RS1-P0024-L-3161-2-scaled.jpg",
-      desc: "Sneakers - Grained alf leather - Black",
-      price: "R 15 000.00",
-      class: "Replay",
-    },
-    {
-      id: 2,
-      name: "Replay Field Jupiter Lace Up Sneaker",
-      Image: "https://i.postimg.cc/hPPSDWSG/GMS1-P-000-C0020-L-057-S.jpg",
-      desc: "Loafers - Calf leather - Havane",
-      price: "R 3 500.00",
-      class: "Replay",
-    },
-    {
-      id: 3,
-      name: "Replay  ",
-      Image: "https://i.postimg.cc/zBgkHc8b/GMZ4-B-000-C0002-T-003-S.jpg",
-      desc: "Loafers - Calf leather - Black",
-      price: "R 2 700.00",
-      class: "Replay",
-    },
-    {
-      id: 4,
-      name: "Replay Tennet Shoot Lace Up Sneaker",
-      Image: "https://i.postimg.cc/hPTPZbPL/GMS6-I-000-C0007-T-3125-S.jpg",
-      desc: "Sneakers - Veau velours - Black",
-      price: "R 3 100,00",
-      class: "Replay",
-    },
-    {
-      id: 5,
-      name: "Replay 'Polys UP' Lace Up Sneakers",
-      Image: "https://i.postimg.cc/26cvSpqN/POLARIS-UP-RZ3-P0005-L-061-B-scaled.jpg",
-      desc: "High-top sneakers - Suede , jacquard César and strass - Black",
-      price: "R 3 000.00",
-      class: "Replay",
-    },
-    {
-        id: 6,
-        name: "Replay Cross Skate Lace Up Sneaker",
-        Image: "https://i.postimg.cc/ZqkF3hK8/CROSS-SKATE-RZ4-B0001-L-039-S-scaled.jpg",
-        desc: "High-top sneakers - Suede and coated canva Techno CL - Black",
-        price: "R 3 200.00",
-        class: "Replay",
+      {
+        id: 7,
+        name: "Replay Field Mix Lace Up Sneaker",
+        image: "https://i.postimg.cc/5yVxv0Th/RS1-P0024-L-3161-2-scaled.jpg",
+        desc: "",
+        price: "R 15 000.00",
+        category: "Replay",
       },
-  ];
-function replay() {
-  let dispProds = document.querySelector(".replay-prod");
-  prods.forEach((data) => {
-    dispProds.innerHTML += `
-    <div class="card cardA m-3 col-lg-4 col-md-4 col-12 all replay ${data.class}">
-    <img src="${data.Image}" style="width:100%; height: 400px">
-    <div card="inner-card why">
-    <h1 class="fs-6 px-2">${data.name}</h1>
-    <p class="price fs-5 px-2">${data.price}</p>
-    <p class="px-2"><button class="but add py-2" onclick="addToCart()">ADD TO BAG</button></p>
-    </div>
-  </div>
-    `
-  });
-}
-// replay();
-
-  let dolceProds = [
-    {
-      id: 1,
-      name: "Dolce & Gabbana Jacquard Portofino Sneaker",
-      Image: "https://i.postimg.cc/pXSQwVdH/CS1761-AB940-80001-1.jpg",
-      desc: "Sneakers - Grained alf leather - Black",
-      price: "R 21 000.00",
-      class: "Dolce-Gabbana",
-    },
-    {
-      id: 2,
-      name: "Dolce & Gabbana Calfskin Portofino Sneaker",
-      Image: "https://i.postimg.cc/d05Vf3qR/CS1772-AH502-HWF57-1.jpg",
-      desc: "Loafers - Calf leather - Havane",
-      price: "R 19 500.00",
-      class: "Dolce-Gabbana",
-    },
-    {
-      id: 3,
-      name: "Dolce & Gabbana Mixed Materials NS-1 Sneaker",
-      Image: "https://i.postimg.cc/Gpt4dGgg/CS1810-AO844-HARZN-1.jpg",
-      desc: "Loafers - Calf leather - Black",
-      price: "R 12 700.00",
-      class: "Dolce-Gabbana",
-    },
-    {
-      id: 4,
-      name: "Dolce & Gabbana Calfskin Loafer",
-      Image: "https://i.postimg.cc/rmgZx6Nw/A50506-A1037-80999-1.jpg",
-      desc: "Sneakers - Veau velours - Black",
-      price: "R 15 100,00",
-      class: "Dolce-Gabbana",
-    },
-    {
-      id: 5,
-      name: "Dolce & Gabbana Polished Loafer",
-      Image: "https://i.postimg.cc/W1hjK615/A50411-AW593-80999-1.jpg",
-      desc: "High-top sneakers - Suede , jacquard César and strass - Black",
-      price: "R 21 000.00",
-      class: "Dolce-Gabbana",
-    },
-    {
-        id: 6,
-        name: "Dolce & Gabbana Brushed Monk Strap Loafer",
-        Image: "https://i.postimg.cc/gJ2c49QT/A10644-A1203-80999-1.jpg",
-        desc: "High-top sneakers - Suede and coated canva Techno CL - Black",
-        price: "R 17 200.00",
-        class: "Dolce-Gabbana",
+      {
+        id: 8,
+        name: "Replay Field Jupiter Lace Up Sneaker",
+        image: "https://i.postimg.cc/q76C01Kj/GMS1-P-000-C0020-L-057-S.jpg",
+        desc: "",
+        price: "R 3 500.00",
+        category: "Replay",
       },
-  ];
-function dolcegabbana() {
-  let dispDolce = document.querySelector(".dolce-prod");
-  dolceProds.forEach((data) => {
-    dispDolce.innerHTML += `
-    <div class="card cardA m-3 col-lg-4 col-md-4 col-12 all dolce-gabbana ${data.class}">
-    <img src="${data.Image}" style="width:100%; height: 400px">
-    <div class="inner-card">
-    <h1 class="fs-6">${data.name}</h1>
-    <p class="price fs-5">${data.price}</p>
-    <p><button class="but add py-2">ADD TO BAG</button></p>
-    </div>
-  </div>
-    `
-  });
-}
-// dolcegabbana();
-
-  let dieselProds = [
-    {
-      id: 1,
-      name: "Diesel Leather And Suede Sneaker",
-      Image: "https://i.postimg.cc/D07Hks1j/430220-3193-022034-2-1052x.jpg",
-      desc: "Sneakers - Grained alf leather - Black",
-      price: "R 5 000.00",
-      class: "Diesel",
-    },
-    {
-      id: 2,
-      name: "Diesel S-Principia Low X",
-      Image: "https://i.postimg.cc/XNxDBrfW/426149-7552-941624-2-1052x.jpg",
-      desc: "Loafers - Calf leather - Havane",
-      price: "R 4 900.00",
-      class: "Diesel",
-    },
-    {
-      id: 3,
-      name: "Diesel Perforated D Logo Sneaker",
-      Image: "https://i.postimg.cc/QtfkCWRn/423138-5840-831324-3-1052x.jpg",
-      desc: "Loafers - Calf leather - Black",
-      price: "R 3 700.00",
-      class: "Diesel",
-    },
-    {
-      id: 4,
-      name: "Diesel Full-Grain Leather Sneaker",
-      Image: "https://i.postimg.cc/8kFtcZzR/430246-2812-642034-2-1052x.jpg",
-      desc: "Sneakers - Veau velours - Black",
-      price: "R 4 900,00",
-      class: "Diesel",
-    },
-    {
-      id: 5,
-      name: "Diesel Mesh And Suede Sneaker",
-      Image: "https://i.postimg.cc/GtYFQS46/430308-0608-803034-2-1052x.jpg",
-      desc: "High-top sneakers - Suede , jacquard César and strass - Black",
-      price: "R 3 599.00",
-      class: "Diesel",
-    },
-    {
-        id: 6,
-        name: "Diesel Canvas Sneaker",
-        Image: "https://i.postimg.cc/d1ZrsSjD/430241-5109-142034-2-1052x.jpg",
-        desc: "High-top sneakers - Suede and coated canva Techno CL - Black",
-        price: "R 4 599.00",
-        class: "Diesel",
+      {
+        id: 9,
+        name: "Replay",
+        image: "https://i.postimg.cc/LXqDck4p/CROSS-SKATE-RZ4-B0001-L-039-S-scaled.jpg",
+        desc: "",
+        price: "R 2 700.00",
+        category: "Replay",
       },
+      {
+        id: 10,
+        name: "Replay Tennet Shoot Lace Up Sneaker",
+        image: "https://i.postimg.cc/Bv2QMkH9/POLARIS-UP-RZ3-P0005-L-061-S-scaled.jpg",
+        desc: "",
+        price: "R 3 100,00",
+        category: "Replay",
+      },
+      {
+        id: 11,
+        name: "Replay 'Polys UP' Lace Up Sneakers",
+        image: "https://i.postimg.cc/yNj21Tz3/GMZ4-B-000-C0002-T-003-S.jpg",
+        desc: "",
+        price: "R 3 000.00",
+        category: "Replay",
+      },
+      {
+          id: 12,
+          name: "Replay Cross Skate Lace Up Sneaker",
+          image: "https://i.postimg.cc/dV6K3F20/GMS6-I-000-C0007-T-3125-B.jpg",
+          desc: "",
+          price: "R 3 200.00",
+          category: "Replay",
+      },
+      {
+        id: 13,
+        name: "Dolce & Gabbana Jacquard Portofino Sneaker",
+        image: "https://i.postimg.cc/pTx8ZD9C/CS1761-AB940-80001-1.jpg",
+        desc: "",
+        price: "R 21 000.00",
+        category: "Dolce-Gabbana",
+      },
+      {
+        id: 14,
+        name: "Dolce & Gabbana Calfskin Portofino Sneaker",
+        image: "https://i.postimg.cc/zfYRznkN/CS1772-AH502-HWF57-1.jpg",
+        desc: "",
+        price: "R 19 500.00",
+        category: "Dolce-Gabbana",
+      },
+      {
+        id: 15,
+        name: "Dolce & Gabbana Mixed Materials NS-1 Sneaker",
+        image: "https://i.postimg.cc/Mp9K4Vrt/CS1810-AO844-HARZN-1.jpg",
+        desc: "",
+        price: "R 12 700.00",
+        category: "Dolce-Gabbana",
+      },
+      {
+        id: 16,
+        name: "Dolce & Gabbana Calfskin Loafer",
+        image: "https://i.postimg.cc/kGq0qh2S/A50506-A1037-80999-1.jpg",
+        desc: "",
+        price: "R 15 100,00",
+        category: "Dolce-Gabbana",
+      },
+      {
+        id: 17,
+        name: "Dolce & Gabbana Polished Loafer",
+        image: "https://i.postimg.cc/W1hjK615/A50411-AW593-80999-1.jpg",
+        desc: "",
+        price: "R 21 000.00",
+        category: "Dolce-Gabbana",
+      },
+      {
+          id: 18,
+          name: "Dolce & Gabbana Brushed Monk Strap Loafer",
+          image: "https://i.postimg.cc/gJ2c49QT/A10644-A1203-80999-1.jpg",
+          desc: "",
+          price: "R 17 200.00",
+          category: "Dolce-Gabbana",
+      },
+      {
+        id: 19,
+        name: "Diesel Leather And Suede Sneaker",
+        image: "https://i.postimg.cc/D07Hks1j/430220-3193-022034-2-1052x.jpg",
+        desc: "",
+        price: "R 5 000.00",
+        category: "Diesel",
+      },
+      {
+        id: 20,
+        name: "Diesel S-Principia Low X",
+        image: "https://i.postimg.cc/XNxDBrfW/426149-7552-941624-2-1052x.jpg",
+        desc: "",
+        price: "R 4 900.00",
+        category: "Diesel",
+      },
+      {
+        id: 21,
+        name: "Diesel Perforated D Logo Sneaker",
+        image: "https://i.postimg.cc/QtfkCWRn/423138-5840-831324-3-1052x.jpg",
+        desc: "",
+        price: "R 3 700.00",
+        category: "Diesel",
+      },
+      {
+        id: 22,
+        name: "Diesel Full-Grain Leather Sneaker",
+        image: "https://i.postimg.cc/8kFtcZzR/430246-2812-642034-2-1052x.jpg",
+        desc: "",
+        price: "R 4 900,00",
+        category: "Diesel",
+      },
+      {
+        id: 23,
+        name: "Diesel S-Hua Low X",
+        image: "https://i.postimg.cc/qRxDrPNd/430241-5109-142034-2-1052x.jpg",
+        desc: "",
+        price: "R 5 500.00",
+        category: "Diesel",
+      },
+      {
+          id: 24,
+          name: "Diesel S-Keegy Mid",
+          image: "https://i.postimg.cc/8cVGXQqQ/430308-0608-803034-2-1052x.jpg",
+          desc: "",
+          price: "R 5 200.00",
+          category: "Diesel",
+      }
   ];
-function diesel(){
-  let dispDiesel = document.querySelector(".diesel-prod");
-  dieselProds.forEach((data) => {
-    dispDiesel.innerHTML += `
-    <div class="card cardA m-3 all diesel ${data.class}">
-    <img src="${data.Image}" style="width:100%; height: 400px">
-    <div class="inner-card">
-    <h1 class="fs-6">${data.name}</h1>
-    <p class="price fs-5">${data.price}</p>
-    <p><button class="px-3 add py-2">ADD TO BAG</button></p>
-    </div>
-  </div>
-    `
+
+
+  function displayProducts() {
+    for (let item of items) {
+      let card = document.createElement("div");
+      card.classList.add("card", item.category, "hide");  //"hide"
+      let imgCont = document.createElement("div");
+      imgCont.classList.add("image-container");
+      let image = document.createElement("img");
+      image.setAttribute("src", item.image);
+      imgCont.appendChild(image);
+      card.appendChild(imgCont);
+      let name = document.createElement("h3");
+      name.textContent = item.name;
+      card.appendChild(name);
+
+      let desc = document.createElement("p");
+      desc.textContent = item.desc;
+      card.appendChild(desc);
+
+      let price = document.createElement("p");
+      price.textContent = item.price;
+      card.appendChild(price);
+
+      let addToCartBtn = document.createElement("button");
+      addToCartBtn.classList.add("add-to-cart-btn");
+      addToCartBtn.textContent = "Add To Bag";
+      card.appendChild(addToCartBtn);
+  
+      document.getElementById("prods").appendChild(card);
+    }
+  }
+  
+  displayProducts();
+
+  function categorizeItemsCategory(category = "") {
+    const productsContainer = document.getElementById("prods");
+    productsContainer.innerHTML = "";
+    if ( category === "") {
+      displayProducts()
+    } else {
+      const categorizedItems = items.filter((item) => item.category === category);
+      categorizedItems.forEach(item => {
+        const categorizedItem = document.createElement("div")
+        categorizedItem.innerHTML = `
+        <div class="card">
+        <div class="image-container">
+        <img src="${item.image}"></img>
+        <h3>${item.name}</h3>
+        <p>${item.desc}</p>
+        <p>${item.price}</p>
+        <button class="add-to-cart-btn">Add To Bag</button>
+        </div>
+        </div>
+        `
+        document.getElementById("prods").appendChild(categorizedItem)
+      });
+    }
+    displayProducts(categorizedItems);
+    console.log(categorizedItems)
+  }
+  const buttonsToCategorize = document.querySelectorAll(".category-button");
+  
+  buttonsToCategorize.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const category = event.target.dataset.category;
+      categorizeItemsCategory(category)
+    });
   });
-}
-// diesel();
-
-function displayAll(){
-  diesel();
-  dolcegabbana();
-  replay()
-  christianlouboutin();
-}
-
