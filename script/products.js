@@ -7,6 +7,7 @@
       desc: "Sneakers - Grained alf leather - Black",
       price: "R 15 000.00",
       category: "Christian-Louboutin",
+      quantity: 5,
     },
     {
       id: 2,
@@ -15,6 +16,7 @@
       desc: "Loafers - Calf leather - Havane",
       price: "R 17 500.00",
       category: "Christian-Louboutin",
+      quantity: 5,
     },
     {
       id: 3,
@@ -23,6 +25,7 @@
       desc: "Loafers - Calf leather - Black",
       price: "R 21 000.00",
       category: "Christian-Louboutin",
+      quantity: 5,
     },
     {
       id: 4,
@@ -31,6 +34,7 @@
       desc: "Sneakers - Veau velours - Black",
       price: "R 12 300.00",
       category: "Christian-Louboutin",
+      quantity: 5,
     },
     {
       id: 5,
@@ -47,6 +51,7 @@
         desc: "High-top sneakers - Suede and coated canva Techno CL - Black",
         price: "R 10 000.00",
         category: "Christian-Louboutin",
+        quantity: 5,
       },
       {
         id: 7,
@@ -55,6 +60,7 @@
         desc: "",
         price: "R 15 000.00",
         category: "Replay",
+        quantity: 5,
       },
       {
         id: 8,
@@ -63,6 +69,7 @@
         desc: "",
         price: "R 3 500.00",
         category: "Replay",
+        quantity: 5,
       },
       {
         id: 9,
@@ -71,6 +78,7 @@
         desc: "",
         price: "R 2 700.00",
         category: "Replay",
+        quantity: 5,
       },
       {
         id: 10,
@@ -79,6 +87,7 @@
         desc: "",
         price: "R 3 100,00",
         category: "Replay",
+        quantity: 5,
       },
       {
         id: 11,
@@ -87,6 +96,7 @@
         desc: "",
         price: "R 3 000.00",
         category: "Replay",
+        quantity: 5,
       },
       {
           id: 12,
@@ -95,6 +105,7 @@
           desc: "",
           price: "R 3 200.00",
           category: "Replay",
+          quantity: 5,
       },
       {
         id: 13,
@@ -103,6 +114,7 @@
         desc: "",
         price: "R 21 000.00",
         category: "Dolce-Gabbana",
+        quantity: 5,
       },
       {
         id: 14,
@@ -111,6 +123,7 @@
         desc: "",
         price: "R 19 500.00",
         category: "Dolce-Gabbana",
+        quantity: 5,
       },
       {
         id: 15,
@@ -119,6 +132,7 @@
         desc: "",
         price: "R 12 700.00",
         category: "Dolce-Gabbana",
+        quantity: 5,
       },
       {
         id: 16,
@@ -127,6 +141,7 @@
         desc: "",
         price: "R 15 100,00",
         category: "Dolce-Gabbana",
+        quantity: 5,
       },
       {
         id: 17,
@@ -135,6 +150,7 @@
         desc: "",
         price: "R 21 000.00",
         category: "Dolce-Gabbana",
+        quantity: 5,
       },
       {
           id: 18,
@@ -143,6 +159,7 @@
           desc: "",
           price: "R 17 200.00",
           category: "Dolce-Gabbana",
+          quantity: 5,
       },
       {
         id: 19,
@@ -151,6 +168,7 @@
         desc: "",
         price: "R 5 000.00",
         category: "Diesel",
+        quantity: 5,
       },
       {
         id: 20,
@@ -159,6 +177,7 @@
         desc: "",
         price: "R 4 900.00",
         category: "Diesel",
+        quantity: 5,
       },
       {
         id: 21,
@@ -167,6 +186,7 @@
         desc: "",
         price: "R 3 700.00",
         category: "Diesel",
+        quantity: 5,
       },
       {
         id: 22,
@@ -175,6 +195,7 @@
         desc: "",
         price: "R 4 900,00",
         category: "Diesel",
+        quantity: 5,
       },
       {
         id: 23,
@@ -183,6 +204,7 @@
         desc: "",
         price: "R 5 500.00",
         category: "Diesel",
+        quantity: 5,
       },
       {
           id: 24,
@@ -191,6 +213,7 @@
           desc: "",
           price: "R 5 200.00",
           category: "Diesel",
+          quantity: 5,
       }
   ];
 
@@ -219,6 +242,9 @@
 
       let addToCartBtn = document.createElement("button");
       addToCartBtn.classList.add("add-to-cart-btn");
+      addToCartBtn.addEventListener('click', () => {
+        addToCart(item)
+      });
       addToCartBtn.textContent = "Add To Bag";
       card.appendChild(addToCartBtn);
   
@@ -244,7 +270,7 @@
         <h3>${item.name}</h3>
         <p>${item.desc}</p>
         <p>${item.price}</p>
-        <button class="add-to-cart-btn">Add To Bag</button>
+        <button class="add-to-cart-btn" onclick="addToCartBtn()">Add To Bag</button>
         </div>
         </div>
         `
@@ -262,3 +288,12 @@
       categorizeItemsCategory(category)
     });
   });
+let cartItems = []
+  function addToCart(item) {
+    const selectedItem = item.find((item) => item.id === item.id);
+    if (selectedItem) {
+      cartItems.push(selectedItem);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      alert('Item added to cart!');
+    }
+  }
