@@ -5,6 +5,9 @@
     font-family: montserrat;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 .navbar-nav {
     padding-right: 10% !important;
 }

@@ -50,8 +50,11 @@
     background-size: cover;
     border-radius: 0% !important;
 }
+html {
+    scroll-behavior: smooth;
+}
 .card2 {
-    background-image: url(https://i.postimg.cc/rwx1krmk/CROSS-SKATE-RZ4-B0001-L-039-S-scaled.jpg);
+    background-image: url(https://i.postimg.cc/9Fry2Yjr/CROSS-SKATE-RZ4-B0001-L-039-B-scaled.jpg);
     background-repeat: no repeat;
     background-position: center;
     background-size: cover;
@@ -65,7 +68,7 @@
     border-radius: 0% !important;
 }
 .card4 {
-    background-image: url(https://i.postimg.cc/7Z5HRFxG/430220-3196-022034-3-1052x.jpg);
+    background-image: url(https://i.postimg.cc/bwV0bVH0/430220-3196-022034-3-1052x.jpg);
     background-repeat: no repeat;
     background-position: center;
     background-size: cover;

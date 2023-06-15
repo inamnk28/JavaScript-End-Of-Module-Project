@@ -5,6 +5,9 @@
     font-family: montserrat;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 /* .back-img {
     background-image: url(https://i.postimg.cc/pT1qp0T3/HIGH-TOP-MEN-COVER-EU.jpg);
     background-repeat: no-repeat;
