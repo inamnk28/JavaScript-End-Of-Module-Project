@@ -8,15 +8,9 @@
 html {
     scroll-behavior: smooth;
 }
-/* .back-img {
-    background-image: url(https://i.postimg.cc/pT1qp0T3/HIGH-TOP-MEN-COVER-EU.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 700px !important;
-    border-radius: 0;
-} */
+.thelinks:hover {
+    color: black;
+}
 .navbar-nav {
     padding-right: 10% !important;
 }
@@ -64,10 +58,11 @@ html {
     justify-content: center;
 }
 .card {
-    width: 100% !important;
-    max-width: 300px;
+    /* width: 100% !important; */
+    max-width: 350px;
     margin: 10px;
     border-radius: 0;
+    min-height: 450px;
     margin-inline: 20px;
     text-align: center;
     display: inline-block;

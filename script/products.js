@@ -217,67 +217,33 @@
       }
   ];
 
-
-  function displayProducts() {
-    for (let item of items) {
-      let card = document.createElement("div");
-      card.classList.add("card", item.category, "hide");  //"hide"
-      let imgCont = document.createElement("div");
-      imgCont.classList.add("image-container");
-      let image = document.createElement("img");
-      image.setAttribute("src", item.image);
-      imgCont.appendChild(image);
-      card.appendChild(imgCont);
-      let name = document.createElement("h3");
-      name.textContent = item.name;
-      card.appendChild(name);
-
-      let desc = document.createElement("p");
-      desc.textContent = item.desc;
-      card.appendChild(desc);
-
-      let price = document.createElement("p");
-      price.textContent = item.price;
-      card.appendChild(price);
-
-      let addToCartBtn = document.createElement("button");
-      addToCartBtn.classList.add("add-to-cart-btn");
-      addToCartBtn.addEventListener('click', () => {
-        addToCart(item)
-      });
-      addToCartBtn.textContent = "Add To Bag";
-      card.appendChild(addToCartBtn);
-  
-      document.getElementById("prods").appendChild(card);
-    }
-  }
-  
-  displayProducts();
-
-  function categorizeItemsCategory(category = "") {
+function categorizeItemsCategory(category = "") {
     const productsContainer = document.getElementById("prods");
     productsContainer.innerHTML = "";
+    let categorizedItems = [];
+
     if ( category === "") {
-      displayProducts()
+      categorizedItems = items
     } else {
-      const categorizedItems = items.filter((item) => item.category === category);
-      categorizedItems.forEach(item => {
-        const categorizedItem = document.createElement("div")
-        categorizedItem.innerHTML = `
-        <div class="card">
-        <div class="image-container">
-        <img src="${item.image}"></img>
-        <h3>${item.name}</h3>
-        <p>${item.desc}</p>
-        <p>${item.price}</p>
-        <button class="add-to-cart-btn" onclick="addToCartBtn()">Add To Bag</button>
-        </div>
-        </div>
-        `
-        document.getElementById("prods").appendChild(categorizedItem)
-      });
+      categorizedItems = items.filter((item) => item.category === category);
     }
-    displayProducts(categorizedItems);
+    categorizedItems.forEach(item => {
+      const categorizedItem = document.createElement("div")
+      categorizedItem.innerHTML = `
+      <div class="card">
+      <div class="image-container">
+      <img src="${item.image}"></img>
+      <h3>${item.name}</h3>
+      <p>${item.desc}</p>
+      <p>${item.price}</p>
+      <button class="add-to-cart-btn" data-item-id="${item.id}">Add To Bag</button>
+      </div>
+      </div>
+      `
+      productsContainer.appendChild(categorizedItem);
+    });
+    combineButtons();
+    // displayProducts(categorizedItems);
     console.log(categorizedItems)
   }
   const buttonsToCategorize = document.querySelectorAll(".category-button");
@@ -288,12 +254,83 @@
       categorizeItemsCategory(category)
     });
   });
-let cartItems = []
-  function addToCart(item) {
-    const selectedItem = item.find((item) => item.id === item.id);
-    if (selectedItem) {
-      cartItems.push(selectedItem);
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
-      alert('Item added to cart!');
-    }
+let cartItems = [];
+function addToCart(selected) {
+  const selectedItem = items.find((item) => item.id === selected.id);
+  if (selectedItem && selectedItem.quantity > 0) {
+    selectedItem.quantity--;
+    cartItems.push(selectedItem);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    alert("Item added to cart!");
+    displayCartItems();
   }
+}
+
+function displayCartItems() {
+    const cartContent = document.querySelector("#cart-items");
+    cartContent.innerHTML = "";
+    const storedCartItems = localStorage.getItem('cartItems');
+    if (storedCartItems) {
+      cartItems = JSON.parse(storedCartItems)
+    }
+    cartItems.forEach((item, index) => {
+      const cartTable = document.createElement("tr");
+      cartTable.innerHTML = `
+      <td class="w-30">
+      <p>${item.name}</p>
+      </td>
+      <td class="">${item.price}</td>
+      <td>${item.quantity}</td>
+      `
+      cartContent.appendChild(cartTable)
+    });
+}
+displayCartItems();
+function combineButtons() {
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+addToCartBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const itemId = parseInt(btn.dataset.itemId);
+    const selectedItem = items.find((item) => item.id === itemId);
+    addToCart(selectedItem);
+  });
+});
+}
+
+function displayProducts() {
+  for (let item of items) {
+    let card = document.createElement("div");
+    card.classList.add("card", item.category, "hide");  //"hide"
+    let imgCont = document.createElement("div");
+    imgCont.classList.add("image-container");
+    let image = document.createElement("img");
+    image.setAttribute("src", item.image);
+    imgCont.appendChild(image);
+    card.appendChild(imgCont);
+    let name = document.createElement("h3");
+    name.textContent = item.name;
+    card.appendChild(name);
+
+    let desc = document.createElement("p");
+    desc.textContent = item.desc;
+    card.appendChild(desc);
+
+    let price = document.createElement("p");
+    price.textContent = item.price;
+    card.appendChild(price);
+
+    let addToCartBtn = document.createElement("button");
+    addToCartBtn.classList.add("add-to-cart-btn");
+    addToCartBtn.setAttribute("data-item-id", item.id);
+    addToCartBtn.addEventListener('click', () => {
+      addToCart(item)
+    });
+    addToCartBtn.textContent = "Add To Bag";
+    card.appendChild(addToCartBtn);
+
+    document.getElementById("prods").appendChild(card);
+  }
+}
+displayProducts();
+
+
