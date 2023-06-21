@@ -12,7 +12,7 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-white">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Insane Footwear</a>
+        <a class="navbar-brand" href="#">Insane Footwear</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,13 +41,26 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5 text-black" id="staticBackdropLabel">Shopping Cart</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <table id="cart-items">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="body"></tbody>
+        </table>
       </div>
       <div class="modal-footer">
+        <div class="totalPrice">
+          <p id="total">Total:</p>
+        </div>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Understood</button>
       </div>
@@ -71,23 +84,23 @@
         <div class="first-cards row justify-content-center">
           <div class="card card1 col-lg-6 col-md-6 col-12">
             <div class="card-body christ">
-              <button class="buttons "><a href="" class="color">Christian Louboutin</a></button>
+              <button class="buttons "><a href="../JavaScript-End-Of-Module-Project/html_pages/products.html" class="color">Christian Louboutin</a></button>
             </div>
           </div>
           <div class="card card2 col-lg-6 col-md-6 col-12">
             <div class="card-body play">
-              <button class="buttons"><a href="" class="color">Replay</a></button>
+              <button class="buttons"><a href="../JavaScript-End-Of-Module-Project/html_pages/products.html" class="color">Replay</a></button>
             </div>
           </div>
           <div class="first-cards row justify-content-center">
             <div class="card card3 col-lg-6 col-md-6 col-12">
               <div class="card-body dolce">
-                <button class="buttons"><a href="" class="color">Dolce & Gabbana</a></button>
+                <button class="buttons"><a href="../JavaScript-End-Of-Module-Project/html_pages/products.html" class="color">Dolce & Gabbana</a></button>
               </div>
             </div>
             <div class="card card4 col-lg-6 col-md-6 col-12">
               <div class="card-body die">
-                <button class="buttons"><a href="" class="color">Diesel</a></button>
+                <button class="buttons"><a href="../JavaScript-End-Of-Module-Project/html_pages/products.html" class="color">Diesel</a></button>
               </div>
             </div>
         </div>

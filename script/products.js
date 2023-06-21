@@ -1,5 +1,5 @@
-
- let items = [
+const adminProducts = JSON.parse(localStorage.getItem("adminProducts")) || [];
+let items = [
     {
       id: 1,
       name: "Christian Louboutin Rantulow",
@@ -217,6 +217,10 @@
       }
   ];
 
+  for(let i = 0; i < adminProducts.length; i++) {
+    items.push(adminProducts[i]);
+  }
+// function to categorize products by brand
 function categorizeItemsCategory(category = "") {
     const productsContainer = document.getElementById("prods");
     productsContainer.innerHTML = "";
@@ -254,6 +258,7 @@ function categorizeItemsCategory(category = "") {
       categorizeItemsCategory(category)
     });
   });
+// Function to add, display, calculate sum of items in cart
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 function addToCart(selected) {
   const selectedItem = items.find((item) => item.id === selected.id);
@@ -292,8 +297,9 @@ function displayCartItems() {
       `
       cartContent.appendChild(cartTable)
     });
-}
+};
 displayCartItems();
+// function of the add to cart button
 function combineButtons() {
   const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
 addToCartBtns.forEach((btn) => {
@@ -304,7 +310,7 @@ addToCartBtns.forEach((btn) => {
   });
 });
 }
-
+// function to display all products when youland on the product page
 function displayProducts() {
   for (let item of items) {
     let card = document.createElement("div");

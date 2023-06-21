@@ -10,6 +10,13 @@
 .thelinks:hover {
     color: black;
 }
+.totalPrice {
+    margin-right: 15rem;
+}
+.modal-content {
+    border-radius: 0px !important;
+    box-shadow: 0.1rem 0.1rem black;
+}
 .hero {
     background-image: url(https://i.postimg.cc/t46X1V4g/pexels-terje-sollie-298864.jpg);
     background-repeat: no-repeat !important;
