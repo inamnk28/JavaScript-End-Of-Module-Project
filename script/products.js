@@ -277,7 +277,7 @@ function sumOfProducts () {
   cartItems.forEach((item) => {
     totalPrice += parseFloat(item.price.replace(/[^\d.]/g, ''));
   });
-  totalCartItems.textContent = totalPrice
+  totalCartItems.innerText = `Total: R ${totalPrice}`;
 }
 function displayCartItems() {
     const cartContent = document.querySelector("#cart-items");
