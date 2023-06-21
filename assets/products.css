@@ -8,6 +8,13 @@
 html {
     scroll-behavior: smooth;
 }
+.totalPrice {
+    margin-right: 15rem;
+}
+.modal-content {
+    border-radius: 0px !important;
+    box-shadow: 0.1rem 0.1rem black;
+}
 .thelinks:hover {
     color: black;
 }

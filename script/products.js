@@ -254,7 +254,7 @@ function categorizeItemsCategory(category = "") {
       categorizeItemsCategory(category)
     });
   });
-let cartItems = [];
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 function addToCart(selected) {
   const selectedItem = items.find((item) => item.id === selected.id);
   if (selectedItem && selectedItem.quantity > 0) {
@@ -263,9 +263,17 @@ function addToCart(selected) {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     alert("Item added to cart!");
     displayCartItems();
+    sumOfProducts();
   }
 }
-
+function sumOfProducts () {
+  const totalCartItems = document.getElementById("total");
+  let totalPrice = 0;
+  cartItems.forEach((item) => {
+    totalPrice += parseFloat(item.price.replace(/[^\d.]/g, ''));
+  });
+  totalCartItems.textContent = totalPrice
+}
 function displayCartItems() {
     const cartContent = document.querySelector("#cart-items");
     cartContent.innerHTML = "";
