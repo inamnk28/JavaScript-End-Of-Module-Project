@@ -37,54 +37,55 @@
           </nav> 
     </header>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Shopping Cart</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <table id="cart-items">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Remove</th>
-                </tr>
-              </thead>
-              <tbody id="body"></tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <div class="totalPrice">
-              <p id="total">Total:</p>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-black" id="staticBackdropLabel">Shopping Cart</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <div class="modal-body">
+              <table id="cart-items">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody id="body"></tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <div class="totalPrice">
+                <p id="total">Total:</p>
+              </div>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <form action="" class="row align-items-center" id="productForm">
-                <div class="col-lg-6 col-md-6 col-sm-2 image4"><input type="text" name="" id="image" placeholder="Image URL" required></div>
-                <div class="col-lg-6 col-md-6 col-sm-2"><input type="text" id="productName" placeholder="Product Name" required></div>
-                <div class="col-lg-6 col-md-6 col-sm-2"><input type="number" id="productPrice" placeholder="Product Price" required></div>
-                <div class="col-lg-6 col-md-6 col-sm-2"><input type="text" id="productCategory" id="productCategory" placeholder="Category" required></div>
-                <div class="col-lg-6 col-md-6 col-sm-2"><input type="number" id="quantity" placeholder="Enter the quantity" required></div>
-                <div class="col-lg-6 col-md-6 col-sm-2"><button type="submit" id="addToStore">Add to Store</button></div>
-            </form>
-        </div>
+    <div class="container justify-content-center">
+            <hr>
+            <h1 class="display-5 fs-4 text-center">Admin</h1>
+            <hr>
+        <form action="" class="row justify-content-center" id="productForm">
+            <div class="mb-2"><input type="text" name="" id="image" placeholder="Image URL..." required></div>
+            <div class="mb-2"><input type="text" id="productName" placeholder="Product Name..." required></div>
+            <div class="mb-2"><input type="number" id="productPrice" placeholder="Product Price..." required></div>
+            <div class="mb-2"><input type="text" id="productCategory" id="productCategory" placeholder="Category..." required></div>
+            <div class="mb-2"><input type="number" id="quantity" placeholder="Enter the quantity..." required></div>
+            <div class="mb-2"><button type="submit" id="addToStore">Add to Store</button></div>
+        </form>
     </div>
     <table id="product-table">
         <thead>
-            <th>Image URL</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Category</th>
-            <th>Quantity</th>
+            <th class="border-1 px-5">Image URL</th>
+            <th class="border-1 px-5">Name</th>
+            <th class="border-1 px-5">Price</th>
+            <th class="border-1 px-5">Category</th>
+            <th class="border-1 px-5">Quantity</th>
         </thead>
         <tbody id="productList"></tbody>
     </table>

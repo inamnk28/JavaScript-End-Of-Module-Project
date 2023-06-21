@@ -21,13 +21,13 @@ function displayAdminProducts() {
         adminProducts.forEach((product) => {
             let adminTable = document.createElement("tr");
             adminTable.innerHTML = `
-            <td><img src="${product.image}"> </td>
-            <td>${product.name}</td>
-            <td>${product.price}</td>
-            <td>${product.category}</td>
-            <td>${product.quantity}</td>
+            <td class="text-center"><img src="${product.image}"> </td>
+            <td class="text-center">${product.name}</td>
+            <td class="text-center">${product.price}</td>
+            <td class="text-center">${product.category}</td>
+            <td class="text-center">${product.quantity}</td>
             <td>
-                <button class="deleteBtn" onclick="deleteProducts(${product.id})"> Delete </button>
+                <button class="deleteBtn px-2 bg-black text-white fw-bold border-white" onclick="deleteProducts(${product.id})"> Delete </button>
             </td>
             `;
             listProducts.appendChild(adminTable);

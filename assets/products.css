@@ -11,6 +11,20 @@ html {
 .totalPrice {
     margin-right: 15rem;
 }
+.btn-secondary {
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+.btn-primary {
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
 .modal-content {
     border-radius: 0px !important;
     box-shadow: 0.1rem 0.1rem black;
