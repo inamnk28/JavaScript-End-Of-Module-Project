@@ -310,7 +310,7 @@ addToCartBtns.forEach((btn) => {
   });
 });
 }
-// function to display all products when youland on the product page
+// function to display all products when you land on the product page
 function displayProducts() {
   for (let item of items) {
     let card = document.createElement("div");
@@ -346,5 +346,16 @@ function displayProducts() {
   }
 }
 displayProducts();
+function buy() {
+  if (cartItems.length > 0) {
+    cartItems = [];
+    localStorage.removeItem("cartItems");
+    displayCartItems();
+    sumOfProducts();
+    alert("Thank You For Your Purchase!")
+  } else {
+    alert("Add Items And Checkout")
+  }
+}
 
 
